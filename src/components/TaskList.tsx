@@ -28,7 +28,7 @@ export function TaskList() {
   }
 
   function handleToggleTaskCompletion(id: number) {
-    const newtasks = tasks.map((task) =>
+    const newTask = tasks.map((task) =>
       task.id === id
         ? {
             ...task,
@@ -36,12 +36,12 @@ export function TaskList() {
           }
         : task
     );
-    setTasks(newtasks);
+    setTasks(newTask);
   }
 
   function handleRemoveTask(id: number) {
-    const tasksFilter = tasks.filter((task) => task.id !== id);
-    setTasks(tasksFilter);
+    const filteredTasks = tasks.filter((task) => task.id !== id);
+    setTasks(filteredTasks);
   }
 
   return (
